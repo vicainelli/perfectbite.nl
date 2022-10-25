@@ -17,7 +17,7 @@ export function LanguageSelector() {
   return (
     <Menu as="div" className="relative">
       <Menu.Button className="inline-flex items-center px-1 sm:px-2 py-1 justify-center rounded border-2 border-blue-600 text-blue-600">
-        <span className="uppercase text-xs font-bold mr-2">{t('common:language')}</span>
+        <span className="uppercase text-xs hidden sm:block font-bold mr-2">{t('common:language')}</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-4 sm:h-6 w-4 sm:w-6"
