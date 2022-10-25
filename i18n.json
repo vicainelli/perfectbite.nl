@@ -1,0 +1,8 @@
+{
+  "locales": ["pt-br", "en"],
+  "defaultLocale": "en",
+  "localeDetection": false,
+  "pages": {
+    "*": ["common", "flavors", "boxset"]
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "title": "Caixas de brigadeiros",
+  "box_title": "Caixa com {{quantity}} brigadeiros",
+  "max_flavors": "Até {{max_flavors}} sabores diferentes"
+}

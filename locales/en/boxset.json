@@ -1,0 +1,5 @@
+{
+  "title": "Brigadeiros box set",
+  "box_title": "Box set with {{quantity}} brigadeiros",
+  "max_flavors": "Up to {{max_flavors}} different flavors"
+}
