@@ -1,7 +1,18 @@
+import { event } from '../lib/gtag'
+
 const LinkInstagram = () => {
+  const onClick = (e: any) => {
+    event({
+      action: 'click',
+      category: 'social_media',
+      label: 'Instagram',
+      value: "1"
+    })
+  }
   return (
     <a
       className="ml-6 text-pink-500"
+      onClick={onClick}
       href="https://instagram.com/perfectbite.nl"
       target="_blank"
       rel="noreferrer"

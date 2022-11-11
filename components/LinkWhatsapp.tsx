@@ -1,7 +1,18 @@
+import { event } from '../lib/gtag'
+
 const LinkWhatsapp = () => {
+  const onClick = (e: any) => {
+    event({
+      action: 'click',
+      category: 'social_media',
+      label: 'Whatsapp',
+      value: "1"
+    })
+  }
   return (
     <a
       className="text-green-500"
+      onClick={onClick}
       href="https://wa.me/31618717480"
       target="_blank"
       title="whatsapp"
