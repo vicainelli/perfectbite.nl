@@ -14,7 +14,7 @@ const Home: NextPage = () => {
 
       <div className="m-4 flex items-center justify-center">
         <main className="">
-          <header className="mb-8">
+          <header className="mb-16">
             <Image
               src="/perfect-bite-slogan.svg"
               alt="Perfect Bite"
