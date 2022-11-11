@@ -25,13 +25,13 @@ const Home: NextPage = () => {
 
           <nav className="grid gap-8">
             <a
-              className="border-2 rounded p-3 text-gray-800 font-bold text-center"
+              className="border-2 border-gray-800 rounded p-3 text-gray-800 font-bold text-center"
               href="https://perfectbite.nl"
             >
               Website
             </a>
             <a
-              className="border-2 rounded p-3 text-gray-800 font-bold text-center"
+              className="border-2 border-gray-800 rounded p-3 text-gray-800 font-bold text-center"
               href="https://instagram.com/perfectbite.nl"
               target="_blank"
               rel="noreferrer"
@@ -39,7 +39,7 @@ const Home: NextPage = () => {
               Instagram
             </a>
             <a
-              className="border-2 rounded p-3 text-gray-800 font-bold text-center"
+              className="border-2 border-gray-800 rounded p-3 text-gray-800 font-bold text-center"
               href="https://wa.me/31618717480"
               target="_blank"
               title="whatsapp"
