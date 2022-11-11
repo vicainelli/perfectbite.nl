@@ -8,7 +8,7 @@ const Header = () => {
       <div className="py-2 px-4 shadow-lg">
         <div className="flex items-center justify-between">
           <div className="flex-1 mr-6">
-            <Image src="/perfect-bite.svg" alt="Aline Yumi brigadeiros" width={300} height={57} />
+            <Image src="/perfect-bite.svg" alt="Perfect Bite" width={300} height={57} />
           </div>
           <nav className="flex items-center">
             <LinkInstagram />
