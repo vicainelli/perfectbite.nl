@@ -41,7 +41,7 @@ export function LanguageSelector() {
             {({ active }: { active: boolean }) => (
               <Link className={`flex items-center p-3 ${
                 active ? 'bg-blue-500 text-white' : 'text-gray-600'
-              }`} locale="pt-br" href="/">
+              }`} locale="pt-br" href="/products">
                   Português
               </Link>
             )}
@@ -50,7 +50,7 @@ export function LanguageSelector() {
             {({ active }: { active: boolean }) => (
               <Link className={`flex items-center p-3 ${
                 active ? 'bg-blue-500 text-white' : 'text-gray-600'
-              }`} locale="en" href="/">
+              }`} locale="en" href="/products">
                   English
               </Link>
             )}

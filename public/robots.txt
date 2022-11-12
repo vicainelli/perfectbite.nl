@@ -1,0 +1,7 @@
+# Block all crawlers for /products
+User-agent: *
+Disallow: /products
+
+# Allow all crawlers
+User-agent: *
+Allow: /
