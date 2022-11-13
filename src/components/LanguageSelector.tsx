@@ -1,11 +1,11 @@
-// export function LanguageSelector() {
-
-import { Menu } from '@headlessui/react'
+import { Menu } from "@headlessui/react";
 export function LanguageSelector() {
   return (
     <Menu as="div" className="relative">
       <Menu.Button className="inline-flex items-center px-1 sm:px-2 py-1 justify-center rounded border-2 border-blue-600 text-blue-600 dark:border-blue-200 dark:text-blue-200">
-        <span className="uppercase text-xs hidden sm:block font-bold mr-2">language</span>
+        <span className="uppercase text-xs hidden sm:block font-bold mr-2">
+          language
+        </span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-4 sm:h-6 w-4 sm:w-6"
@@ -27,24 +27,30 @@ export function LanguageSelector() {
         <div>
           <Menu.Item>
             {({ active }: { active: boolean }) => (
-              <a className={`flex items-center p-3 ${
-                active ? 'bg-blue-500 text-white' : 'text-gray-600'
-              }`}  href="/products">
-                  Português
+              <a
+                className={`flex items-center p-3 ${
+                  active ? "bg-blue-500 text-white" : "text-gray-600"
+                }`}
+                href="pt/products"
+              >
+                Português
               </a>
             )}
           </Menu.Item>
           <Menu.Item>
             {({ active }: { active: boolean }) => (
-              <a className={`flex items-center p-3 ${
-                active ? 'bg-blue-500 text-white' : 'text-gray-600'
-              }`}  href="/products">
-                  English
+              <a
+                className={`flex items-center p-3 ${
+                  active ? "bg-blue-500 text-white" : "text-gray-600"
+                }`}
+                href="/products"
+              >
+                English
               </a>
             )}
           </Menu.Item>
         </div>
       </Menu.Items>
     </Menu>
-  )
+  );
 }

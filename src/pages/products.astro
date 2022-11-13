@@ -1,9 +1,12 @@
 ---
+import { t, changeLanguage } from "i18next";
 import Layout from "../layouts/Layout.astro";
 import Flavors from "../components/Flavors.astro";
 import BoxSets from "../components/BoxSets.astro";
-import PerfectBiteLogo from '../components/PerfectBiteLogo.astro';
+import PerfectBiteLogo from "../components/PerfectBiteLogo.astro";
 import { LanguageSelector } from "../components/LanguageSelector.jsx";
+
+changeLanguage("en");
 ---
 
 <Layout title="Perfect Bite - Brigadeiros">
@@ -13,7 +16,7 @@ import { LanguageSelector } from "../components/LanguageSelector.jsx";
         <div class="flex items-center justify-between">
           <div class="flex-1 mr-6">
             <a href="/">
-                <PerfectBiteLogo />
+              <PerfectBiteLogo />
             </a>
           </div>
           <nav class="flex items-center mr-6">
@@ -21,7 +24,7 @@ import { LanguageSelector } from "../components/LanguageSelector.jsx";
               class="text-green-500"
               href="https://wa.me/31618717480"
               target="_blank"
-              title="whatsapp"
+              title={t("whatsapp")}
               rel="noreferrer"
             >
               <svg
@@ -65,7 +68,7 @@ import { LanguageSelector } from "../components/LanguageSelector.jsx";
       <section class="mb-20">
         <div class="my-8 rounded bg-blue-200 p-2">
           <p class="text-center text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            {t("disclaimer")}
           </p>
         </div>
       </section>
