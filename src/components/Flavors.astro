@@ -1,0 +1,55 @@
+---
+import { t } from "i18next";
+
+type Flavor = {
+  name: string;
+  observation?: boolean;
+};
+
+const flavors: Flavor[] = [
+  { name: "darkChocolate" },
+  { name: "milkChocolate" },
+  { name: "coffeCacao" },
+  { name: "saltedCaramel" },
+  { name: "coconut" },
+  { name: "dulceDeLeche" },
+  { name: "lemonWhiteBlossoms" },
+  { name: "lemonFeuilletine" },
+  { name: "strawberry" },
+  { name: "milk" },
+  { name: "milkNutella" },
+  { name: "oreo" },
+  { name: "pistachio" },
+  { name: "chocolate" },
+  { name: "chocolateAlmonds" },
+  { name: "baileys", observation: true },
+];
+---
+
+<section class="mx-4 mb-20">
+  <div>
+    <h2
+      class="mb-4 text-xl font-thin uppercase tracking-widest sm:text-3xl dark:text-white"
+    >
+      {t("flavors.title")}
+    </h2>
+  </div>
+  <div>
+    <ul class="divide-y">
+      {
+        flavors.map((flavor: Flavor) => (
+          <li>
+            <div class="py-4 text-gray-800 dark:text-white sm:text-lg">
+              <p>{t(`flavors.${flavor.name}`)}</p>
+              {flavor.observation && (
+                <p class="text-xs">
+                  * {t(`common:observations.${flavor.name}`)}
+                </p>
+              )}
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

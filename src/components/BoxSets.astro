@@ -1,0 +1,43 @@
+---
+import { t } from "i18next";
+const boxes = [
+  { quantity: 6, maxFlavors: 3, amount: 9 },
+  { quantity: 12, maxFlavors: 4, amount: 15 },
+  { quantity: 25, maxFlavors: 5, amount: 28 },
+];
+---
+
+<section class="mx-4 mb-16">
+  <div>
+    <h2
+      class="mb-4 font-thin tracking-widest text-xl sm:text-3xl uppercase dark:text-white"
+    >
+      {t("boxset.title")}
+    </h2>
+  </div>
+  <div>
+    <ul class="divide-y">
+      {
+        boxes.map((box: any) => (
+          <li>
+            <div class="flex items-center justify-between py-4">
+              <div>
+                <h3 class="text-lg text-gray-800 dark:text-white">
+                  {t("boxset.box_title", { quantity: box.quantity })}
+                </h3>
+                <p class="text-sm lowercase text-gray-500 dark:text-white">
+                  {t("boxset.max_flavors", { max_flavors: box.maxFlavors })}
+                </p>
+              </div>
+              <div>
+                <span class="text-lg sm:text-xl font-bold text-gray-800 dark:text-white">
+                  {box.amount}€
+                </span>
+              </div>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
