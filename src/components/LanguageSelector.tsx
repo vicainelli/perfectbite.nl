@@ -31,7 +31,7 @@ export function LanguageSelector() {
                 className={`flex items-center p-3 ${
                   active ? "bg-blue-500 text-white" : "text-gray-600"
                 }`}
-                href="pt/products"
+                href="/pt/products"
               >
                 Português
               </a>
