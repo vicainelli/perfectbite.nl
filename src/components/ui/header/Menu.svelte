@@ -1,20 +1,20 @@
 <script lang="ts">
-  let isMenuOpen: boolean = $state(false);
+let isMenuOpen: boolean = $state(false);
 
-  function onclick() {
-    isMenuOpen = !isMenuOpen;
-  }
-  const LINKS: { name: string; href: string }[] = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
-  ];
+function onclick() {
+  isMenuOpen = !isMenuOpen;
+}
+const LINKS: { name: string; href: string }[] = [
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
+];
 
-  interface Props {
-    isWideScreen: boolean;
-  }
+interface Props {
+  isWideScreen: boolean;
+}
 
-  const { isWideScreen }: Props = $props();
+const { isWideScreen }: Props = $props();
 </script>
 
 <div>

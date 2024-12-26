@@ -1,15 +1,15 @@
 <script lang="ts">
-  let isSearchOpen: boolean = $state(false);
+let isSearchOpen: boolean = $state(false);
 
-  function onclick() {
-    isSearchOpen = !isSearchOpen;
-  }
+function onclick() {
+  isSearchOpen = !isSearchOpen;
+}
 
-  interface Props {
-    isWideScreen: boolean;
-  }
+interface Props {
+  isWideScreen: boolean;
+}
 
-  const { isWideScreen }: Props = $props();
+const { isWideScreen }: Props = $props();
 </script>
 
 <div>

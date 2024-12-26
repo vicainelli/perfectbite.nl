@@ -6,6 +6,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "lint": "biome lint --write .",
+    "lint:fix": "biome check --write .",
     "astro": "astro"
   },
   "dependencies": {
@@ -17,6 +19,7 @@
   },
   "module": "index.ts",
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "@types/bun": "latest"
   },
   "peerDependencies": {
