@@ -1,13 +1,12 @@
-<div class="flex h-12">
-  <svg
-    class="fill-[#232323] dark:fill-gray-100"
-    viewBox="0 0 309 57"
+<svg
+    viewBox="0 0 309 81"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
   >
+    <title>perfect-bite copy</title>
     <g
-      id="perfect-bite-copy-2"
+      id="perfect-bite-copy"
       stroke="none"
       stroke-width="1"
       fill-rule="evenodd"
@@ -24,4 +23,3 @@
       </g>
     </g>
   </svg>
-</div>

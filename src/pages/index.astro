@@ -1,36 +1,11 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import PerfectBiteSlogamLogo from "@/components/PerfectBiteSlogamLogo.astro";
+import Header from "@/components/ui/header/Header.svelte";
 ---
 
 <Layout title="Perfect Bite - Brigadeiros">
-  <header class="mb-16 ">
-    <div class="mx-auto flex justify-center max-w-screen-sm">
-      <PerfectBiteSlogamLogo />
-    </div>
-  </header>
+  <Header client:visible />
   <div class="mx-auto max-w-screen-sm">
-    <main class="mx-8">
-
-      <nav class="grid gap-8">
-        <a
-          class="border-2 border-gray-800 rounded p-3 text-gray-800 dark:text-white dark:border-white font-bold text-center"
-          href="https://instagram.com/perfectbite.nl"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Instagram
-        </a>
-        <a
-          class="border-2 border-gray-800 rounded p-3 text-gray-800 dark:text-white dark:border-white font-bold text-center"
-          href="https://wa.me/31618717480"
-          target="_blank"
-          title="whatsapp"
-          rel="noreferrer"
-        >
-          WhatsApp
-        </a>
-      </nav>
-    </main>
+    <main class="mx-8"></main>
   </div>
 </Layout>
