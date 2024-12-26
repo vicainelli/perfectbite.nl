@@ -1,11 +1,49 @@
 ---
 import Header from "@/components/ui/header/Header.svelte";
 import Layout from "@/layouts/Layout.astro";
+import ProductCard from "@/components/ui/cards/ProductCard.astro";
 ---
 
 <Layout title="Perfect Bite - Brigadeiros">
   <Header client:visible />
-  <div class="mx-auto max-w-screen-sm">
-    <main class="mx-8"></main>
+  <div class="mx-auto max-w-screen-lg">
+    <main class="mx-4 flex flex-col space-y-8">
+
+      <section>
+        <div>
+          <ProductCard featured />
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <div class="grid grid-cols-2 gap-8">
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <button class="w-full bg-gray-500 text-white py-4 rounded-md">
+            <pre>call_to_action</pre>
+          </button>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <pre>events</pre>
+        </div>
+      </section>
+
+    </main>
+
   </div>
+  <footer></footer>
 </Layout>
