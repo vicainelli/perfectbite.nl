@@ -18,7 +18,8 @@
   "module": "index.ts",
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "lefthook": "^1.10.1"
   },
   "peerDependencies": {
     "typescript": "^5.7.2"
