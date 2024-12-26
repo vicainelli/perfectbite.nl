@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import ProductCard from "@/components/ui/cards/ProductCard.astro";
 import Header from "@/components/ui/header/Header.astro";
+import BoxSet from "@/components/ui/sections/BoxSet.astro";
 import Layout from "@/layouts/Layout.astro";
 import EventCard from "@/components/ui/cards/EventCard.astro";
 
@@ -14,15 +15,15 @@ const randomFlavours = flavours.sort(() => 0.5 - Math.random()).slice(0, 6);
 
 <Layout title="Perfect Bite - Brigadeiros">
   <Header  />
-  <div class="mx-auto max-w-screen-lg">
-    <main class="mx-4 flex flex-col space-y-4 sm:space-y-12">
+  <div class="">
+    <main class="flex flex-col space-y-4 sm:space-y-12">
       <!-- <section>
         <div>
           <ProductCard featured />
         </div>
       </section> -->
 
-      <section>
+      <section class="mx-auto max-w-screen-lg">
         <div>
           <div class="grid grid-cols-1 gap-4 sm:gap-8 sm:grid-cols-2 md:grid-cols-3">
             {randomFlavours.map((flavour) => (
@@ -39,6 +40,9 @@ const randomFlavours = flavours.sort(() => 0.5 - Math.random()).slice(0, 6);
           </a>
         </div>
       </section>
+
+      <BoxSet />
+
 
       <section>
         <div class="space-y-4">
