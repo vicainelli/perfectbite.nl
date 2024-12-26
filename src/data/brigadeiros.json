@@ -1,0 +1,19 @@
+{
+  "flavours": [
+    { "id": "darkChocolate" },
+    { "id": "coffeCacao" },
+    { "id": "saltedCaramel" },
+    { "id": "coconut" },
+    { "id": "dulceDeLeche" },
+    { "id": "lemonWhiteBlossoms" },
+    { "id": "strawberry" },
+    { "id": "milk" },
+    { "id": "milkNutella" },
+    { "id": "pistachio" },
+    { "id": "chocolate" },
+    { "id": "chocolateAlmonds" },
+    { "id": "chocolatePeanut" },
+    { "id": "baileys" },
+    { "id": "oreo" }
+  ]
+}

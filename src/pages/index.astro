@@ -1,35 +1,33 @@
 ---
+import { getCollection } from "astro:content";
+import ProductCard from "@/components/ui/cards/ProductCard.astro";
 import Header from "@/components/ui/header/Header.astro";
 import Layout from "@/layouts/Layout.astro";
-import ProductCard from "@/components/ui/cards/ProductCard.astro";
+import EventCard from "@/components/ui/cards/EventCard.astro";
+
+const flavours = await getCollection("flavours");
+const events = await getCollection("events");
+
+// get 6 ramdon items from flavours
+const randomFlavours = flavours.sort(() => 0.5 - Math.random()).slice(0, 6);
 ---
 
 <Layout title="Perfect Bite - Brigadeiros">
   <Header  />
   <div class="mx-auto max-w-screen-lg">
     <main class="mx-4 flex flex-col space-y-4 sm:space-y-8">
-
       <section>
         <div>
-          <ProductCard featured />
+          <!-- <ProductCard featured /> -->
         </div>
       </section>
 
       <section>
         <div>
           <div class="grid grid-cols-1 gap-4 sm:gap-8 sm:grid-cols-2 md:grid-cols-3">
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
+            {randomFlavours.map((flavour) => (
+              <ProductCard flavour={flavour.data} />
+            ))}
           </div>
         </div>
       </section>
@@ -43,8 +41,13 @@ import ProductCard from "@/components/ui/cards/ProductCard.astro";
       </section>
 
       <section>
-        <div>
-          <pre>events</pre>
+        <div class="space-y-4">
+          <h2 class="uppercase font-thin tracking-widest text-2xl text-center dark:text-cream-200">Upcoming Events</h2>
+          <div class="grid grid-cols-1 gap-4 sm:gap-8 sm:grid-cols-2 justify-items-center">
+            {events.map((event) => (
+              <EventCard event={event.data} />
+            ))}
+          </div>
         </div>
       </section>
 
