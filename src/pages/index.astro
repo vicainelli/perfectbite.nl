@@ -15,12 +15,12 @@ const randomFlavours = flavours.sort(() => 0.5 - Math.random()).slice(0, 6);
 <Layout title="Perfect Bite - Brigadeiros">
   <Header  />
   <div class="mx-auto max-w-screen-lg">
-    <main class="mx-4 flex flex-col space-y-4 sm:space-y-8">
-      <section>
+    <main class="mx-4 flex flex-col space-y-4 sm:space-y-12">
+      <!-- <section>
         <div>
-          <!-- <ProductCard featured /> -->
+          <ProductCard featured />
         </div>
-      </section>
+      </section> -->
 
       <section>
         <div>
@@ -33,10 +33,10 @@ const randomFlavours = flavours.sort(() => 0.5 - Math.random()).slice(0, 6);
       </section>
 
       <section>
-        <div>
-          <button class="w-full bg-gray-500 text-white py-4 rounded-md">
-            <pre>call_to_action</pre>
-          </button>
+        <div class="text-center">
+          <a href="/brigadeiros" class="w-full max-w-48 inline-block text-center bg-cream-700 text-white py-4 rounded-md">
+            check_all_flavours
+          </a>
         </div>
       </section>
 
