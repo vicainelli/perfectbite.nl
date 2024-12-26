@@ -1,6 +1,6 @@
 ---
   const LINKS: { name: string; href: string }[] = [
-    { name: "Home", href: "/" },
+    { name: "Brigadeiros", href: "/brigadeiros" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
@@ -12,7 +12,7 @@
       <ul class="flex justify-center gap-4">
         {LINKS.map(({ name, href }) => (
           <li class="text-right">
-            <a class="uppercase text-xs" {href}>{name}</a>
+            <a class="uppercase text-sm p-2 block" {href}>{name}</a>
           </li>
         ))}
       </ul>
