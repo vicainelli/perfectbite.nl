@@ -1,0 +1,21 @@
+---
+  const LINKS: { name: string; href: string }[] = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
+  ];
+---
+
+<div>
+  <div>
+    <nav>
+      <ul class="flex justify-center gap-4">
+        {LINKS.map(({ name, href }) => (
+          <li class="text-right">
+            <a class="uppercase text-xs" {href}>{name}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</div>
