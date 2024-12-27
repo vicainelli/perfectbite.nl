@@ -1,12 +1,12 @@
 ---
 import { getCollection } from "astro:content";
+import EventCard from "@/components/ui/cards/EventCard.astro";
 import ProductCard from "@/components/ui/cards/ProductCard.astro";
+import Footer from "@/components/ui/footer/Footer.astro";
 import Header from "@/components/ui/header/Header.astro";
 import BoxSet from "@/components/ui/sections/BoxSet.astro";
 import CeleCelebrations from "@/components/ui/sections/Celebrations.astro";
 import Layout from "@/layouts/Layout.astro";
-import EventCard from "@/components/ui/cards/EventCard.astro";
-import Footer from "@/components/ui/footer/Footer.astro";
 
 const flavours = await getCollection("flavours");
 const events = await getCollection("events");
