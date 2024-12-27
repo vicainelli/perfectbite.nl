@@ -5,6 +5,7 @@ import Header from "@/components/ui/header/Header.astro";
 import BoxSet from "@/components/ui/sections/BoxSet.astro";
 import Layout from "@/layouts/Layout.astro";
 import EventCard from "@/components/ui/cards/EventCard.astro";
+import Footer from "@/components/ui/footer/Footer.astro";
 
 const flavours = await getCollection("flavours");
 const events = await getCollection("events");
@@ -23,13 +24,15 @@ const randomFlavours = flavours.sort(() => 0.5 - Math.random()).slice(0, 6);
         </div>
       </section> -->
 
-      <section class="mx-auto max-w-screen-lg">
+      <section class="mx-4">
+        <div class="mx-auto max-w-screen-lg">
         <div>
           <div class="grid grid-cols-1 gap-4 sm:gap-8 sm:grid-cols-2 md:grid-cols-3">
             {randomFlavours.map((flavour) => (
               <ProductCard flavour={flavour.data} />
             ))}
           </div>
+        </div>
         </div>
       </section>
 
@@ -44,9 +47,9 @@ const randomFlavours = flavours.sort(() => 0.5 - Math.random()).slice(0, 6);
       <BoxSet />
 
 
-      <section>
+      <section class="px-8 py-16">
         <div class="space-y-4">
-          <h2 class="uppercase font-thin tracking-widest text-2xl text-center dark:text-cream-200">Upcoming Events</h2>
+          <h2 class="text-center sm:text-left text-3xl font-serif font-bold dark:text-cocoa-100 text-balance">Upcoming Events</h2>
           <div class="grid grid-cols-1 gap-4 sm:gap-8 sm:grid-cols-2 justify-items-center">
             {events.map((event) => (
               <EventCard event={event.data} />
@@ -56,7 +59,6 @@ const randomFlavours = flavours.sort(() => 0.5 - Math.random()).slice(0, 6);
       </section>
 
     </main>
-
+    <Footer />
   </div>
-  <footer></footer>
 </Layout>
