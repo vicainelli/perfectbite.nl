@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import ProductCard from "@/components/ui/cards/ProductCard.astro";
 import Header from "@/components/ui/header/Header.astro";
 import BoxSet from "@/components/ui/sections/BoxSet.astro";
+import CeleCelebrations from "@/components/ui/sections/Celebrations.astro";
 import Layout from "@/layouts/Layout.astro";
 import EventCard from "@/components/ui/cards/EventCard.astro";
 import Footer from "@/components/ui/footer/Footer.astro";
@@ -15,50 +16,65 @@ const randomFlavours = flavours.sort(() => 0.5 - Math.random()).slice(0, 6);
 ---
 
 <Layout title="Perfect Bite - Brigadeiros">
-  <Header  />
-  <div class="">
-    <main class="flex flex-col space-y-4 sm:space-y-12">
-      <!-- <section>
+    <Header />
+    <div class="">
+        <main class="flex flex-col space-y-4 sm:space-y-12">
+            <!-- <section>
         <div>
           <ProductCard featured />
         </div>
       </section> -->
 
-      <section class="mx-4">
-        <div class="mx-auto max-w-screen-lg">
-        <div>
-          <div class="grid grid-cols-1 gap-4 sm:gap-8 sm:grid-cols-2 md:grid-cols-3">
-            {randomFlavours.map((flavour) => (
-              <ProductCard flavour={flavour.data} />
-            ))}
-          </div>
-        </div>
-        </div>
-      </section>
+            <section class="mx-4">
+                <div class="mx-auto max-w-screen-lg">
+                    <div>
+                        <div
+                            class="grid grid-cols-1 gap-4 sm:gap-8 sm:grid-cols-2 md:grid-cols-3"
+                        >
+                            {
+                                randomFlavours.map((flavour) => (
+                                    <ProductCard flavour={flavour.data} />
+                                ))
+                            }
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-      <section>
-        <div class="text-center">
-          <a href="/brigadeiros" class="w-full max-w-48 inline-block text-center bg-cream-700 text-white py-4 rounded-md">
-            check_all_flavours
-          </a>
-        </div>
-      </section>
+            <section>
+                <div class="text-center">
+                    <a
+                        href="/products/brigadeiro"
+                        class="w-full max-w-48 inline-block text-center bg-cream-700 text-white py-4 rounded-md"
+                    >
+                        check_all_flavours
+                    </a>
+                </div>
+            </section>
 
-      <BoxSet />
+            <BoxSet />
 
+            <CeleCelebrations />
 
-      <section class="px-8 py-16">
-        <div class="space-y-4">
-          <h2 class="text-center sm:text-left text-3xl font-serif font-bold dark:text-cocoa-100 text-balance">Upcoming Events</h2>
-          <div class="grid grid-cols-1 gap-4 sm:gap-8 sm:grid-cols-2 justify-items-center">
-            {events.map((event) => (
-              <EventCard event={event.data} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-    </main>
-    <Footer />
-  </div>
+            <section class="px-8 py-16">
+                <div class="space-y-4">
+                    <h2
+                        class="text-center sm:text-left text-3xl font-serif font-bold dark:text-cocoa-100 text-balance"
+                    >
+                        Upcoming Events
+                    </h2>
+                    <div
+                        class="grid grid-cols-1 gap-4 sm:gap-8 sm:grid-cols-2 justify-items-center"
+                    >
+                        {
+                            events.map((event) => (
+                                <EventCard event={event.data} />
+                            ))
+                        }
+                    </div>
+                </div>
+            </section>
+        </main>
+        <Footer />
+    </div>
 </Layout>
