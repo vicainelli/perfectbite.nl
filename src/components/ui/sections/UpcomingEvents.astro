@@ -1,0 +1,29 @@
+---
+import { getCollection } from "astro:content";
+
+import EventCard from "@/components/ui/cards/EventCard.astro";
+
+const events = await getCollection("events");
+const eventsQuantity = events.length;
+---
+
+{
+    eventsQuantity && (
+        <section class="px-8 py-16">
+            <div class="mx-auto max-w-screen-lg">
+                <div class="space-y-8">
+                    <h2 class="text-center text-3xl font-serif font-bold dark:text-cocoa-100 text-balance">
+                        Upcoming Events
+                    </h2>
+                    <div
+                        class={`grid grid-cols-1 md:grid-cols-${eventsQuantity} gap-4 sm:gap-8 justify-items-center`}
+                    >
+                        {events.map((event) => (
+                            <EventCard event={event.data} />
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
